@@ -123,7 +123,7 @@ client.on('interactionCreate', async interaction => {
     };
 
     fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
-    await interaction.reply(`${name}님의 전역일은 ${dischargeDate.format('YYYY-MM-DD')} 입니다.`);
+    await interaction.reply(`${name}님의 전역일은 \`${dischargeDate.format('YYYY-MM-DD')}\` 입니다.`);
   }
 
   else if (commandName === '전역일') {
@@ -132,7 +132,7 @@ client.on('interactionCreate', async interaction => {
       await interaction.reply({ content: `${name}님에 대한 정보가 없습니다. 먼저 /정보등록 명령어로 등록해주세요.`, ephemeral: true });
       return;
     }
-    await interaction.reply(`${name}님의 전역일은 ${data[name].dischargeDate} 입니다.`);
+    await interaction.reply(`${name}님의 전역일은 \`${data[name].dischargeDate}\` 입니다.`);
   }
 
   else if (commandName === '리스트') {
@@ -170,7 +170,7 @@ client.on('interactionCreate', async interaction => {
 
     const unit = data[name].unit || '등록되지 않음';
     const specialty = data[name].specialty || '등록되지 않음';
-    await interaction.reply(`${name}님의 자대: ${unit}, 특기: ${specialty}`);
+    await interaction.reply(`${name}님의\n> 📍 자대: \`${unit}\`\n> 🛠️ 특기: \`${specialty}\``);
   }
 });
 
