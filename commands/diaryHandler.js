@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const dayjs = require('dayjs');
 
-const dataPath = path.join(__dirname, '..', 'data.json');
-const diaryDir = path.join(__dirname, '..', 'diaries');
+const dataPath = path.join(__dirname, '..', 'data', 'data.json');
+const diaryDir = path.join(__dirname, '..', 'data', 'diaries');
 if (!fs.existsSync(diaryDir)) fs.mkdirSync(diaryDir);
 
 function loadData() {

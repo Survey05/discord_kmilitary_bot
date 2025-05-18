@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const dayjs = require('dayjs');
 
-const dataPath = path.join(__dirname, '..', 'data.json');
+const dataPath = path.join(__dirname, '..', 'data', 'data.json');
 const servicePeriods = { 육군: 18, 해군: 20, 공군: 21 };
 
 function loadData() {

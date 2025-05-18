@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataPath = path.join(__dirname, '..', 'vacation.json');
+const dataPath = path.join(__dirname, '..', 'data', 'vacation.json');
 
 function loadVacationData() {
   if (!fs.existsSync(dataPath)) return {};
