@@ -140,7 +140,7 @@ client.on('interactionCreate', async interaction => {
     if (names.length === 0) {
       await interaction.reply('아직 등록된 사용자가 없습니다.');
     } else {
-      await interaction.reply(`현재 등록된 사용자:\n${names.join('\n')}`);
+      await interaction.reply(`현재 등록된 사용자:\n${names.map(name => `\`${name}\``).join('\n')}`);
     }
   }
 
