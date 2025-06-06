@@ -93,8 +93,6 @@ if (!['정보등록', '전역일', '리스트', '자대등록', '자대', '입�
 
   if (commandName === '입대일') {
     const name = options.getString('이름');
-    console.log('입대일 명령어 실행:', name);
-    console.log('저장된 데이터:', data[name]);
 
     if (!data[name]) {
       return interaction.reply({ content: `${name}님에 대한 정보가 없습니다.`, ephemeral: true });
